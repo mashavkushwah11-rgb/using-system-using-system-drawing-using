@@ -4,5 +4,18 @@
   "createdAt": "2026-11-11T15:29:28.148Z",
   "filename": "c4bcd4cf-605f-4be9-9d42-f19d7a8ee108.json",
   "geminiStarted": false,
-  "messages": []
+  "messages": [
+    {
+      "id": "a6f31da6-ef1e-4013-8e73-7da11c16db43",
+      "role": "user",
+      "content": "public class MainForm : Form\n{\n    public MainForm()\n    {\n        Text = \"SHADOW CLIENT\";\n        Size = new Size(430, 550);\n        StartPosition = FormStartPosition.CenterScreen;\n        BackColor = Color.FromArgb(10, 12, 19);\n        ForeColor = Color.White;\n        FormBorderStyle = FormBorderStyle.FixedSingle;\n        MaximizeBox = false;\n\n        Label title = new Label()\n        {\n            Text = \"SHADOW CLIENT\",\n            Font = new Font(\"Segoe UI\", 22,\n                FontStyle.Bold),\n            ForeColor = Color.FromArgb(255, 45, 65),\n            Location = new Point(25, 25),\n            AutoSize = true\n        };\n        Controls.Add(title);\n\n        Label subtitle = new Label()\n        {\n            Text = \"GAMING CONTROL PANEL  |  V1.0\",\n            ForeColor = Color.Gray,\n            Font = new Font(\"Segoe UI\", 9),\n            Location = new Point(28, 65),\n            AutoSize = true\n        };\n        Controls.Add(subtitle);\n\n        AddModule(\"ES\", \"ES Module\", 125);\n        AddModule(\"AIM\", \"Aim Module\", 225);\n        AddModule(\"FL\", \"FL Module\", 325);\n\n        Label footer = new Label()\n        {\n            Text = \"SHADOW CLIENT  •  READY\",\n            ForeColor = Color.Gray,\n            Font = new Font(\"Segoe UI\", 9),\n            AutoSize = true,\n            Location = new Point(100, 445)\n        };\n        Controls.Add(footer);\n    }\n\n    void AddModule(string name, string description,\n        int y)\n    {\n        Panel card = new Panel()\n        {\n            Location = new Point(25, y),\n            Size = new Size(365, 75),\n            BackColor = Color.FromArgb(25, 28, 39)\n        };\n\n        Label module = new Label()\n        {\n            Text = name,\n            Font = new Font(\"Segoe UI\", 15,\n                FontStyle.Bold),\n            ForeColor = Color.White,\n            Location = new Point(15, 10),\n            AutoSize = true\n        };\n\n        Label info = new Label()\n        {\n            Text = description,\n            Font = new Font(\"Segoe UI\", 9),\n            ForeColor = Color.Gray,\n            Location = new Point(17, 43),\n            AutoSize = true\n        };\n\n        CheckBox toggle = new CheckBox()\n        {\n            Appearance = Appearance.Button,\n            Text = \"OFF\",\n            TextAlign = ContentAlignment.MiddleCenter,\n            Font = new Font(\"Segoe UI\", 10,\n                FontStyle.Bold),\n            ForeColor = Color.White,\n            BackColor = Color.FromArgb(65, 68, 80),\n            FlatStyle = FlatStyle.Flat,\n            Location = new Point(275, 20),\n            Size = new Size(70, 35),\n            Cursor = Cursors.Hand\n        };\n\n        toggle.FlatAppearance.BorderSize = 0;\n\n        toggle.CheckedChanged += (s, e) =>\n        {\n            toggle.Text = toggle.Checked ? \"ON\" : \"OFF\";\n\n            toggle.BackColor = toggle.Checked\n                ? Color.FromArgb(220, 35, 55)\n                : Color.FromArgb(65, 68, 80);\n        };\n\n        card.Controls.Add(module);\n        card.Controls.Add(info);\n        card.Controls.Add(toggle);\n\n        Controls.Add(card);\n    }\n}",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-11T15:31:29.039Z",
+      "sender": "ios",
+      "is_cancelled": false
+    }
+  ]
 }
